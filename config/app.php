@@ -168,6 +168,11 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
 
+        #================================================
+        #====== paso 00 , mira el archivo instal.txt que esta en la raiz
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -224,6 +229,8 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
         'View' => Illuminate\Support\Facades\View::class,
 
     ],

@@ -1,0 +1,5 @@
+estamos trabajando con laravel 5.4
+lo que se instalo despues de instalar laravel fue:
+1. composer require cviebrock/eloquent-sluggable:^4.2
+1.1 en config/app.php agrego mas cosas a providers y aliases.
+2. composer require "laravelcollective/html":"^5.4.0"
