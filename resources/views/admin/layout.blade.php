@@ -440,6 +440,17 @@
 <!-- ./wrapper -->
 
 <script src="/js/admin.js"></script>
+<script src="/plugins/ckeditor/ckeditor.js"></script>
+<script src="/plugins/ckfinder/ckfinder.js"></script>
+<script>
+
+    $(document).ready(function (){
+
+        var editor = CKEDITOR.replaceAll();
+        CKFINDER.setupCKEditor( editor );
+
+    })
+</script>
 </body>
 
 
