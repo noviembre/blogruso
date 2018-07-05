@@ -157,12 +157,15 @@ class Post extends Model
         return $this->setFeatured();
     }
 
+
+    #============== se usa en crear ===================
     public function setDateAttribute($value)
     {
         $date = Carbon::createFromFormat('d/m/y', $value)->format('Y-m-d');
         $this->attributes['date'] = $date;
     }
 
+    #============== se usa en editar ===================
     public function getDateAttribute($value)
     {
         $date = Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
