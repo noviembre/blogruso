@@ -22,22 +22,22 @@
             <!-- Default box -->
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Lista de Usuarios</h3>
+                    <h3 class="box-title">All Users</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
-                        <a href="{{route('users.create')}}" class="btn btn-success">Nuevo</a>
+                        <a href="{{route('users.create')}}" class="btn btn-success">New</a>
                     </div>
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
+                            <th>Name</th>
                             <th>E-mail</th>
                             <th>Avatar</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>

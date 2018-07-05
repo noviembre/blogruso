@@ -7,7 +7,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Usuarios
+                Users
             </h1>
         </section>
 
@@ -27,7 +27,7 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Nombre</label>
+                            <label for="exampleInputEmail1">Name</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="{{$user->name}}">
                         </div>
                         <div class="form-group">
@@ -43,13 +43,13 @@
                             <label for="exampleInputFile">Avatar</label>
                             <input type="file" name="avatar" id="exampleInputFile">
 
-                            <p class="help-block">Mensaje de la imagen</p>
+                            <p class="help-block">Upload a image (Optional)</p>
                         </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                    <button class="btn btn-warning pull-right">Guardar</button>
+                    <button class="btn btn-warning pull-right">Save</button>
                 </div>
                 <!-- /.box-footer-->
             </div>

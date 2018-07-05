@@ -28,20 +28,20 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Titulo</label>
+                            <label for="exampleInputEmail1">Title</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{old('title')}}">
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputFile">Imagen</label>
+                            <label for="exampleInputFile">Image</label>
                             <input type="file" id="exampleInputFile" name="image">
 
-                            <p class="help-block">info de la imagen</p>
+                            <p class="help-block">Upload a image (Optional)</p>
                         </div>
 
 
                         <div class="form-group">
-                            <label>Categoria</label>
+                            <label>Categories</label>
                             {{Form::select('category_id',
                                 $categories,
                                 null,
@@ -51,7 +51,7 @@
 
 
                         <div class="form-group">
-                            <label>Etiquetas</label>
+                            <label>Tags</label>
                             {{Form::select('tags[]',
                                 $tags,
                                 null,
@@ -60,7 +60,7 @@
                         </div>
                         <!-- Date -->
                         <div class="form-group">
-                            <label>fecha:</label>
+                            <label>Date:</label>
 
                             <div class="input-group date">
                                 <div class="input-group-addon">
@@ -77,7 +77,7 @@
                                 <input type="checkbox" class="minimal" name="is_featured">
                             </label>
                             <label>
-                                Рекомендовать
+                                visible
                             </label>
                         </div>
 
@@ -87,7 +87,7 @@
                                 <input type="checkbox" class="minimal" name="status">
                             </label>
                             <label>
-                                Estado
+                                Active
                             </label>
                         </div>
                     </div>
@@ -99,15 +99,15 @@
                     {{--</div>--}}
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Contenido</label>
+                            <label for="exampleInputEmail1">Content</label>
                             <textarea name="contenido" id="" cols="30" rows="10" class="form-control" ></textarea>
                         </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                    <button class="btn btn-default">Cancelar</button>
-                    <button class="btn btn-success pull-right">Guardar</button>
+                    <button class="btn btn-default">Cancel</button>
+                    <button class="btn btn-success pull-right">save</button>
                 </div>
                 <!-- /.box-footer-->
             </div>

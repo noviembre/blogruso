@@ -29,19 +29,19 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Titulo</label>
+                            <label for="exampleInputEmail1">Title</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" value="{{$post->title}}" name="title">
                         </div>
 
                         <div class="form-group">
                             <img src="{{$post->getImage()}}" alt="" class="img-responsive" width="200">
-                            <label for="exampleInputFile">Imagen</label>
+                            <label for="exampleInputFile">Image</label>
                             <input type="file" id="exampleInputFile" name="image">
 
-                            <p class="help-block">Info de la imagen</p>
+                            <p class="help-block">Upload a image (Optional)</p>
                         </div>
                         <div class="form-group">
-                            <label>Categoria</label>
+                            <label>Categories</label>
                             {{Form::select('category_id',
                                 $categories,
                               $post->getCategoryID(),
@@ -49,7 +49,7 @@
                             }}
                         </div>
                         <div class="form-group">
-                            <label>Etiquetas</label>
+                            <label>Tags</label>
                             {{Form::select('tags[]',
                                 $tags,
                                 $selectedTags,
@@ -58,7 +58,7 @@
                         </div>
                         <!-- Date -->
                         <div class="form-group">
-                            <label>Fecha:</label>
+                            <label>Date:</label>
 
                             <div class="input-group date">
                                 <div class="input-group-addon">
@@ -92,7 +92,7 @@
                                 {{Form::checkbox('status', '1', $post->status, ['class'=>'minimal'])}}
                             </label>
                             <label>
-                                Activo
+                                Active
                             </label>
                         </div>
                     </div>
@@ -106,14 +106,14 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Contenido</label>
+                            <label for="exampleInputEmail1">Content</label>
                             <textarea name="contenido" id="" cols="30" rows="10" class="form-control">{{$post->contenido}}</textarea>
                         </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                    <button class="btn btn-warning pull-right">Guardar</button>
+                    <button class="btn btn-warning pull-right">Save</button>
                 </div>
                 <!-- /.box-footer-->
             </div>

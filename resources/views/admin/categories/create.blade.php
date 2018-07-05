@@ -6,7 +6,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
 
-            <h1>Categorias</h1>
+            <h1>Categories</h1>
 
         </section>
 
@@ -22,15 +22,15 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Titulo</label>
+                            <label for="exampleInputEmail1">Title</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="title">
                         </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                    <button class="btn btn-default">Cancelar</button>
-                    <button class="btn btn-success pull-right">Guardar</button>
+                    <button class="btn btn-default">Cancel</button>
+                    <button class="btn btn-success pull-right">Save</button>
                 </div>
                 <!-- /.box-footer-->
                 {!! Form::close() !!}

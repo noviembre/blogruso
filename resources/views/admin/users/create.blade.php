@@ -22,7 +22,7 @@
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Nombre</label>
+                            <label for="exampleInputEmail1">Name</label>
                             <input type="text" name="name" class="form-control" id="exampleInputEmail1"  value="{{old('name')}}">
                         </div>
                         <div class="form-group">
@@ -34,16 +34,16 @@
                             <input type="password" name="password" class="form-control" id="exampleInputEmail1" >
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Imagen</label>
+                            <label for="exampleInputFile">Image</label>
                             <input type="file" name="avatar" id="exampleInputFile">
 
-                            <p class="help-block">Mensaje de la imagen</p>
+                            <p class="help-block">Upload a image (Optional)</p>
                         </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                    <button class="btn btn-success pull-right">Guardar</button>
+                    <button class="btn btn-success pull-right">Save</button>
                 </div>
                 <!-- /.box-footer-->
             </div>

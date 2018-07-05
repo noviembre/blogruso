@@ -22,20 +22,20 @@
             <!-- Default box -->
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Lista de Categorias</h3>
+                    <h3 class="box-title">All Categories</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="form-group">
-                        <a href="{{route('categories.create')}}" class="btn btn-success">Crear</a>
+                        <a href="{{route('categories.create')}}" class="btn btn-success">New</a>
                     </div>
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>titulo</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
+                            <th>Title</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
 
                         </tr>
                         </thead>
