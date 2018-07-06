@@ -15,7 +15,7 @@ class Post extends Model
     const IS_DRAFT = 0;
     const IS_PUBLIC = 1;
 
-    protected $fillable = ['title','contenido','date'];
+    protected $fillable = ['title','contenido','date','description'];
 
     public function category()
     {
