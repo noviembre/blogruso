@@ -227,4 +227,13 @@ class Post extends Model
 
 
 
+    #========= RELATED POST  =========================================
+    public function related()
+    {
+        return self::all()->except($this->id);
+    }
+
+
+
+
 }
