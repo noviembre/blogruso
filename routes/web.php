@@ -16,8 +16,14 @@ Route::get('/', 'HomeController@index');
 
 
 
-#==========  POSTS / ENLACES  ===========================
+#==========  POSTS / ENLACES O DETALLES ===========================
 Route::get('/post/{slug}', 'HomeController@show')->name('post.show');
+
+#==========  POSTS / TAGS  ===========================
+Route::get('/tag/{slug}', 'HomeController@tag')->name('tag.show');
+
+#==========  POSTS / CATEGORY  ===========================
+Route::get('/category/{slug}', 'HomeController@category')->name('category.show');
 
 
 
