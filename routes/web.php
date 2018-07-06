@@ -11,7 +11,13 @@
 |
 */
 
+#==========  /  ===========================
 Route::get('/', 'HomeController@index');
+
+
+
+#==========  POSTS / ENLACES  ===========================
+Route::get('/post/{slug}', 'HomeController@show')->name('post.show');
 
 
 

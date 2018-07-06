@@ -12,9 +12,9 @@
                     @foreach($posts as $post)
                         <article class="post">
                             <div class="post-thumb">
-                                <a href="#"><img src="{{$post->getImage()}}" alt=""></a>
+                                <a href="{{route('post.show', $post->slug)}}"><img src="{{$post->getImage()}}" alt=""></a>
 
-                                <a href="#" class="post-thumb-overlay text-center">
+                                <a href="{{route('post.show', $post->slug)}}" class="post-thumb-overlay text-center">
                                     <div class="text-uppercase text-center">View Post</div>
                                 </a>
                             </div>
@@ -34,7 +34,7 @@
                                     {!! $post->description !!}
 
                                     <div class="btn-continue-reading text-center text-uppercase">
-                                        <a href="#" class="more-link">
+                                        <a href="{{route('post.show', $post->slug)}}" class="more-link">
                                             Continue Reading
                                         </a>
                                     </div>
@@ -78,17 +78,6 @@
                     @endforeach
 
 
-
-                    {{--
-
-                    hay unos archivos que copie manualmente
-                    no me pudo salir pero solo era copiar la carpeta pagination de
-                    vendor/laravel/framewor/src/Illuminate/Pagination/resources/views/
-                    a resources/views/vendor/Pagination
-                     este era el codigo: php artisan vendor:publish --tag-laravel-pagination
-
-
-                    --}}
                     {{$posts->links()}}
 
 
