@@ -242,6 +242,13 @@ class Post extends Model
     }
 
 
+    #=========  POPULAR POSTS  ==================================
+    public static function getPopularPosts()
+    {
+        return self::orderBy('views','desc')->take(3)->get();
+    }
+
+
 
 
 }
