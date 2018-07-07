@@ -25,17 +25,44 @@ Route::get('/tag/{slug}', 'HomeController@tag')->name('tag.show');
 #==========  POSTS / CATEGORY  ===========================
 Route::get('/category/{slug}', 'HomeController@category')->name('category.show');
 
-#==========  REGISTER  ===========================
-Route::get('/register', 'AuthController@registerForm');
-Route::post('/register', 'AuthController@register');
-
-Route::get('/login','AuthController@loginForm')->name('login');
-Route::post('/login', 'AuthController@login');
-
-Route::get('/logout', 'AuthController@logout');
 
 
-Route::group(['prefix'=>'admin','namespace'=>'Admin', ], function(){
+
+#===============================================================
+#-----------     for USUARIOS REGISTRADOS     -----------------#
+#===============================================================
+
+
+Route::group(['middleware'	=>	'auth'], function(){
+
+
+    Route::get('/logout', 'AuthController@logout');
+
+
+});
+
+
+#===============================================================
+#-------------     for I N V I T A D O S     ------------------#
+#===============================================================
+Route::group(['middleware'	=>	'guest'], function(){
+
+    #==========     REGISTER    ===========================
+    Route::get('/register', 'AuthController@registerForm');
+    Route::post('/register', 'AuthController@register');
+
+    #==========     LOGIN       ===========================
+    Route::get('/login','AuthController@loginForm')->name('login');
+    Route::post('/login', 'AuthController@login');
+
+});
+
+
+#===============================================================
+#------------------     for A D M I N     ---------------------#
+#===============================================================
+
+Route::group(['prefix'=>'admin','namespace'=>'Admin', 'middleware' => 'admin' ], function(){
 
     Route::get('/', 'DashboardController@index');
 
