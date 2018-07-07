@@ -25,6 +25,10 @@ Route::get('/tag/{slug}', 'HomeController@tag')->name('tag.show');
 #==========  POSTS / CATEGORY  ===========================
 Route::get('/category/{slug}', 'HomeController@category')->name('category.show');
 
+#==========  REGISTER  ===========================
+Route::get('/register', 'AuthController@registerForm');
+Route::post('/register', 'AuthController@register');
+
 
 
 Route::group(['prefix'=>'admin','namespace'=>'Admin', ], function(){
