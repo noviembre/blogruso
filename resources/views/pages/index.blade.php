@@ -53,7 +53,7 @@
 
                                     <span class="social-share-title pull-left text-capitalize">
 
-                                        <a href="#">Author</a>
+                                        <a href="#">{{ $post->author->name }}</a>
                                         On {{$post->getDate()}}
                                     </span>
 

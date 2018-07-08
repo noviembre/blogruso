@@ -52,8 +52,10 @@
 
                             <div class="social-share">
 
-                                <span class="social-share-title pull-left text-capitalize">
-                                    {{ $post->getDate() }}
+                                <span
+                                        class="social-share-title pull-left text-capitalize">
+                                    By {{$post->author->name}} On
+                                    {{$post->getDate()}}
                                 </span>
 
                                 <ul class="text-center pull-right">
@@ -93,6 +95,30 @@
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy hello ro mod tempor
                             invidunt ut labore et dolore magna aliquyam erat.</p>
                     </div><!--top comment end-->
+
+
+
+
+                    @if(Auth::check())
+                        <div class="leave-comment"><!--leave comment-->
+                            <h4>Leave a reply</h4>
+
+
+                            <form class="form-horizontal contact-form" role="form" method="post" action="/comment">
+                                {{csrf_field()}}
+                                <input type="hidden" name="post_id" value="{{$post->id}}">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+    										<textarea class="form-control" rows="6" name="message"
+                                                      placeholder="Write Massage"></textarea>
+                                    </div>
+                                </div>
+                                <button class="btn send-btn">Post Comment</button>
+                            </form>
+                        </div><!--end leave comment-->
+                    @endif
+
+
 
 
                     <div class="row"><!--blog next previous-->
