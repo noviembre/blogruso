@@ -8,6 +8,11 @@
                 <div class="col-md-8">
 
 
+                    @if(session('notification_reply'))
+                        <div class="alert alert-success">
+                            {{session('notification_reply')}}
+                        </div>
+                    @endif
 
                     <article class="post">
 
@@ -99,18 +104,23 @@
 
 
 
+                    <!--***************    COMETARIOS     ***************-->
+
+
+
                     @if(Auth::check())
-                        <div class="leave-comment"><!--leave comment-->
+                        <div class="leave-comment">
                             <h4>Leave a reply</h4>
 
 
                             <form class="form-horizontal contact-form" role="form" method="post" action="/comment">
+
                                 {{csrf_field()}}
+
                                 <input type="hidden" name="post_id" value="{{$post->id}}">
                                 <div class="form-group">
                                     <div class="col-md-12">
-    										<textarea class="form-control" rows="6" name="message"
-                                                      placeholder="Write Massage"></textarea>
+    										<textarea class="form-control" rows="6" name="message" placeholder="Write Message"></textarea>
                                     </div>
                                 </div>
                                 <button class="btn send-btn">Post Comment</button>
