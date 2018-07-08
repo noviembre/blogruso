@@ -104,7 +104,7 @@
 
 
 
-                    <!--***************    COMETARIOS     ***************-->
+                    <!--*************    NUEVO COMENTARIO     ************-->
 
 
 
@@ -190,6 +190,34 @@
 
                         </div>
                     </div><!--related post carousel-->
+
+
+                        <!--***********    MOSTRAR COMENTARIOS     *************-->
+
+                        @if(!$post->comments->isEmpty())
+
+                            {{--@foreach($post->getComments() as $comment)--}}
+                            @foreach($post->comments as $comment)
+                                <div class="bottom-comment"><!--bottom comment-->
+                                    <div class="comment-img">
+                                        <img class="img-circle" src="{{$comment->author->getImage()}}" alt="" width="75" height="75">
+                                    </div>
+
+                                    <div class="comment-text">
+                                        <h5>{{$comment->author->name}}</h5>
+
+                                        <p class="comment-date">
+                                            {{$comment->created_at->diffForHumans()}}
+                                        </p>
+
+
+                                        <p class="para">{{$comment->text}}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        @endif
+
 
 
                 </div>
