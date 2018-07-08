@@ -196,8 +196,7 @@
 
                         @if(!$post->comments->isEmpty())
 
-                            {{--@foreach($post->getComments() as $comment)--}}
-                            @foreach($post->comments as $comment)
+                            @foreach($post->getComments() as $comment)
                                 <div class="bottom-comment"><!--bottom comment-->
                                     <div class="comment-img">
                                         <img class="img-circle" src="{{$comment->author->getImage()}}" alt="" width="75" height="75">

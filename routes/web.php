@@ -85,4 +85,12 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin', 'middleware' => 'admin' ],
     #==========  P  O  S  T  S  ===========================
     Route::resource('/posts', 'PostsController');
 
+
+
+    #==========  C O M E N T A R I O S  ===================
+    Route::get('/comments', 'CommentsController@index');
+
+    #==========  APROBAR/DESAPROBAR COMENTARIOS  ==========
+    Route::get('/comments/toggle/{id}', 'CommentsController@toggle');
+
 });
