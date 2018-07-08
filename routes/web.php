@@ -93,4 +93,10 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin', 'middleware' => 'admin' ],
     #==========  APROBAR/DESAPROBAR COMENTARIOS  ==========
     Route::get('/comments/toggle/{id}', 'CommentsController@toggle');
 
+
+    #==========  ELIMINAR COMENTARIOS  ==========
+
+    Route::delete('/comments/{id}/destroy', 'CommentsController@destroy')
+        ->name('comments.destroy');
+
 });

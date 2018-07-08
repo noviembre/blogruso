@@ -24,6 +24,10 @@ class CommentsController extends Controller
         return redirect()->back();
     }
 
-
+    public function destroy($id)
+    {
+        Comment::find($id)->remove();
+        return redirect()->back();
+    }
 
 }

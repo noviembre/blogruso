@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Comment;
 use App\Post;
 use App\Category;
 
@@ -37,6 +38,14 @@ class AppServiceProvider extends ServiceProvider
 
             #=============   ALL CATEGORIES  ==============#
             $view->with('categories', Category::all());
+
+        });
+
+
+        #=============   CONTADOR DE COMENTARIOS SIN APROBAR ==============#
+        view()->composer('admin._sidebar', function($view){
+
+            $view->with('CommentsCount', Comment::where('status',0)->count());
 
         });
 
