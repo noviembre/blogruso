@@ -20,6 +20,8 @@ class SubsController extends Controller
 
         $subs = Subscriptikon::add($request->get('email'));
 
+        $subs->generateToken();
+
         // https://laravel.com/docs/5.5/mail#sending-mail
         // in laravel find this code:
         // Mail::to($request->user())->send(new OrderShipped($order));
@@ -39,6 +41,7 @@ class SubsController extends Controller
         $subs = Subscriptikon::where('token', $token)->firstOrFail();
         $subs->token = null;
         $subs->save();
-        return redirect('/')->with('notification_newsletter', 'Your E-Mail was verificated!');
+        return redirect('/')
+            ->with('notification_newsletter', 'Your E-Mail was verificated!');
     }
 }

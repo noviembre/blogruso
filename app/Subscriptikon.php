@@ -21,4 +21,10 @@ class Subscriptikon extends Model
     {
         $this->delete();
     }
+
+    public function generateToken()
+    {
+        $this->token = str_random(100);
+        $this->save();
+    }
 }
