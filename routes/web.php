@@ -28,6 +28,9 @@ Route::get('/category/{slug}', 'HomeController@category')->name('category.show')
 #==========  POSTS / SUBSCRIBE  ===========================
 Route::post('/subscribe', 'SubsController@subscribe');
 
+#==========  POSTS / VERIFY EMAIL / TOKEN  ================
+Route::get('/verify/{token}', 'SubsController@verify');
+
 
 #===============================================================
 #-----------     for USUARIOS REGISTRADOS     -----------------#
