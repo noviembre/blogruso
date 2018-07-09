@@ -77,11 +77,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            @if(session('status'))
+
+
+            @if(session('notification_newsletter'))
                 <div class="alert alert-info">
-                    {{session('status')}}
+                    {{session('notification_newsletter')}}
                 </div>
             @endif
+
+
         </div>
     </div>
 </div>
